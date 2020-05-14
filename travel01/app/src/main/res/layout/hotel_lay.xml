@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/hotelre1"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            >
+
+            <ImageView
+                android:id="@+id/hotelback_img"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/back2" />
+
+            <ImageView
+                android:layout_width="1.0dp"
+                android:layout_height="40.0dp"
+                android:layout_toRightOf="@id/hotelback_img"
+                />
+
+            <TextView
+                android:id="@+id/hoteltitle_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:textSize="25.0sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/hotelre1">
+
+            <ListView
+                android:id="@+id/hotel_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/jdbj1"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

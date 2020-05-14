@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Ip_set"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="IP settings" />
+        <item
+            android:id="@+id/Remote_con"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Remote Computer" />
+        <item
+            android:id="@+id/local_fld"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Local floder" />
+        <item
+            android:id="@+id/mouse_pad"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Mouse Pad" />
+        <item
+            android:id="@+id/hot_mgr"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="hot_manager" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/Down_lst"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Download List" />
+            <item
+                android:id="@+id/Up_lst"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Upload List" />
+        </menu>
+    </item>
+
+</menu>

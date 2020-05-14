@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">熊猫旅行</string>
+    <string name="title_activity_all_main">熊猫旅行</string>
+    <string name="title_Weather">天气</string>
+    <string name="title_Spots">景点</string>
+    <string name="title_Hotels">酒店</string>
+    <string name="title_info">个人信息</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="username">username</string>
+    <string name="shpname">shpname</string>
+
+    <string name="home_shpname">home_shpname</string>
+    <string name="cityname">cityname</string>
+    <string name="time">time</string>
+    <string name="humidty">humidty</string>
+    <string name="week">week</string>
+    <string name="detail">detail</string>
+    <string name="fl_1">fl_1</string>
+    <string name="tem">tem</string>
+    <string name="climate">climate</string>
+    <string name="wind">wind</string>
+    <string name="background">background</string>
+
+
+
+
+</resources>

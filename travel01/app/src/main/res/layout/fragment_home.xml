@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="data"
+            type="com.example.travel01.ui.home.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:clickable="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/title_rel"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#0060c0">
+
+                <ImageView
+                    android:id="@+id/selectcitys_img"
+                    android:layout_width="45.0dp"
+                    android:layout_height="45.0dp"
+                    android:src="@drawable/citys" />
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toLeftOf="@id/map_img"
+                    android:layout_toRightOf="@+id/selectcitys_img"
+                    android:gravity="center_vertical"
+                    android:text="天气预报"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:id="@+id/map_img"
+                    android:layout_width="45.0dp"
+                    android:layout_height="45.0dp"
+                    android:layout_toLeftOf="@id/refresh_img"
+                    android:src="@drawable/map1" />
+
+                <ImageView
+                    android:id="@+id/refresh_img"
+                    android:layout_width="45.0dp"
+                    android:layout_height="45.0dp"
+                    android:layout_toLeftOf="@id/left_img"
+                    android:src="@drawable/refresh" />
+
+                <ImageView
+                    android:id="@+id/left_img"
+                    android:layout_width="45.0dp"
+                    android:layout_height="45.0dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/left" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/detail_re"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/title_rel"
+                android:background="@drawable/common">
+
+                <RelativeLayout
+                    android:id="@+id/today_rel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/today_lin1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/Tcityname_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{String.valueOf(data.getcityname())}"
+                            android:textColor="#FFFFFF"
+                            android:textSize="45sp" />
+
+                        <TextView
+                            android:id="@+id/Ttime_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{String.valueOf(data.gettime())}"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/Thumidity_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{String.valueOf(data.gethumidty())}"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/today_lin3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="vertical">
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/re2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/today_rel"
+                    android:layout_marginTop="-1dp">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/Tweek_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{String.valueOf(data.getweek())}"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/TTem_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{String.valueOf(data.gettem())}"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/Tclimate_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{String.valueOf(data.getclimate())}"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/Twind_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{String.valueOf(data.getwind())}"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/fl_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{String.valueOf(data.getfl_1())}"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/detail_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{String.valueOf(data.getdetail())}"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/re2">
+
+                    <ImageView
+                        android:id="@+id/empty_img"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginEnd="21dp"
+                        android:layout_marginRight="21dp"
+                        app:srcCompat="@drawable/empty" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

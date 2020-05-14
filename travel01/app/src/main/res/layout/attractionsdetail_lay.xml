@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/more_re"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/re1"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:id="@+id/attrback_img"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/back2" />
+
+            <ImageView
+                android:layout_width="1.0dp"
+                android:layout_height="40.0dp"
+                android:layout_toRightOf="@id/attrback_img" />
+
+            <TextView
+                android:id="@+id/attrtitle_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:textSize="25.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/re1">
+
+            <ListView
+                android:id="@+id/attr_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/lvbj3" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

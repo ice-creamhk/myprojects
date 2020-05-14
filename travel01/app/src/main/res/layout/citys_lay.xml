@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+<variable
+    name="data"
+    type="com.example.travel01.ui.home.HomeViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <RelativeLayout
+            android:id="@+id/stitle_re"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dp"
+            android:background="#000000">
+
+            <ImageView
+                android:id="@+id/title_selectCity_back"
+                android:layout_width="45.0dp"
+                android:layout_height="45.0dp"
+                android:src="@drawable/back2" />
+
+            <ImageView
+                android:layout_width="1.0dp"
+                android:layout_height="40.0dp"
+                android:layout_toRightOf="@id/title_selectCity_back"
+                android:background="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/title_selectCity_name"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="Select City"
+                android:textColor="#FFFFFF"
+                android:textSize="25.0sp"></TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/select_rl"
+            android:layout_width="match_parent"
+            android:layout_height="45.0dp"
+            android:layout_below="@+id/stitle_re">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/weathercityselect_et"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="fill_parent"
+                    android:inputType="textPersonName"
+                    android:hint=""/>
+
+                <Button
+                    android:id="@+id/weathercityselect_bt"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text="搜索" />
+
+                <Button
+                    android:id="@+id/allcity_bt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="显示全部" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/select_rl">
+            <ListView
+                android:id="@+id/allcitys_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/lvbj"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>
